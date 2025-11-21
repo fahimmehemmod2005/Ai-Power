@@ -3,7 +3,7 @@ import 'package:aipower/app/modules/signup/controllers/checkbox_controller.dart'
 import 'package:aipower/app/modules/signup/controllers/hiddenpass_controller.dart';
 import 'package:aipower/app/modules/signup/views/widget/custom_checkbox.dart';
 import 'package:aipower/app/modules/signup/views/widget/custom_rich.dart';
-import 'package:aipower/app/modules/signup/views/widget/custom_textfield.dart';
+import 'package:aipower/common/widgets/custom_textfield/custom_textfield.dart';
 import 'package:aipower/app/modules/signup/views/widget/or_divider.dart';
 import 'package:aipower/common/padding/padding.dart';
 import 'package:aipower/common/widgets/CustomScaffold/custom_scaffold.dart';
