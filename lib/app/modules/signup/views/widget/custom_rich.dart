@@ -22,6 +22,7 @@ class CustomRichText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
+
       textAlign: textAlign,
       text: TextSpan(
         children: [

@@ -62,10 +62,10 @@ class UText {
   static const String signUpNewPassFieldText = "Enter Your Password";
   static const String signUpNewConfirmPassFieldLabelText = "Confirm Password";
   static const String signUpNewConfirmPassFieldText = "Confirm Your Password";
-  static const String signUpFirstRichFirstText = "I agree with";
-  static const String signUpFirstRichSecondText = " terms & conditions";
-  static const String signUpSecondRichFirstText = " and";
-  static const String signUpSecondRichSecondText = " privacy policy.";
+  static const String signUpFirstRichFirstText = "I agree with ";
+  static const String signUpFirstRichSecondText = "terms & conditions";
+  static const String signUpSecondRichFirstText = " and ";
+  static const String signUpSecondRichSecondText = "privacy policy.";
   static const String signUpButtonText = "Sign up";
   static const String signUpDividerText = "OR";
   static const String signUpGoogleButtonText = "Continue with Google";

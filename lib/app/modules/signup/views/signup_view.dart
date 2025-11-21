@@ -195,7 +195,10 @@ class SignupView extends GetView<SignupController> {
                       textOne: UText.signUpFirstRichFirstText,
                       textOneStyle: UTextStyles.title26_w500(),
                       textTwo: UText.signUpFirstRichSecondText,
-                    textTwoStyle: UTextStyles.title26_w500(),
+                    textTwoStyle: GoogleFonts.inter(
+                      fontSize: 12.sp, fontWeight: FontWeight.w500,
+                      decoration: TextDecoration.underline,
+                    ) ,
                     onTap: (){},
                   ),
 
@@ -205,7 +208,10 @@ class SignupView extends GetView<SignupController> {
                     textOne: UText.signUpSecondRichFirstText,
                     textOneStyle: UTextStyles.title26_w500(),
                     textTwo: UText.signUpSecondRichSecondText,
-                    textTwoStyle: UTextStyles.title26_w500(),
+                    textTwoStyle: GoogleFonts.inter(
+                    fontSize: 12.sp, fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.underline,
+                  ) ,
                     onTap: (){},
                   ),
                 ],
@@ -252,7 +258,7 @@ class SignupView extends GetView<SignupController> {
                 onTap: (){},
               ),
 
-              SizedBox(height: 20.h),
+              SizedBox(height: 30.h),
             ],
           ),
         ),
