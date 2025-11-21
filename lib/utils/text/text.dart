@@ -6,7 +6,7 @@ class UText {
 
   //Multi Screen text's
   static const String multiScreenSubTitle = "Your AI assistant for personal injury claims — helping you understand your rights and get the compensation you deserve.";
-  static const String multiScreenButtonText = "multiScreenSubTitle";
+  static const String multiScreenButtonText = "Create an account";
   static const String multiScreenSecondButtonText = "Log in";
 
   //Login screen text's
@@ -64,8 +64,8 @@ class UText {
   static const String signUpNewConfirmPassFieldText = "Confirm Your Password";
   static const String signUpFirstRichFirstText = "I agree with";
   static const String signUpFirstRichSecondText = " terms & conditions";
-  static const String signUpSecondRichFirstText = "and";
-  static const String signUpSecondRichSecondText = " privacy policy";
+  static const String signUpSecondRichFirstText = " and";
+  static const String signUpSecondRichSecondText = " privacy policy.";
   static const String signUpButtonText = "Sign up";
   static const String signUpDividerText = "OR";
   static const String signUpGoogleButtonText = "Continue with Google";

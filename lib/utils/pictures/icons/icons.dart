@@ -25,6 +25,8 @@ class UIcons {
   static const String signUpPassFieldPrefixIcon = 'assets/icons/finger.svg';
   static const String signUpConfirmPassFieldPrefixIcon = 'assets/icons/finger.svg';
   static const String signUpPassFieldSuffixIcon = 'assets/icons/visibility-off.svg';
+  static const String signUpShowPassFieldSuffixIcon = 'assets/icons/visibility-on.svg';
   static const String signUpConfirmPassFieldSuffixIcon = 'assets/icons/visibility-off.svg';
+  static const String signUpShowConfirmPassFieldSuffixIcon = 'assets/icons/visibility-on.svg';
   static const String signUpGoogleButton = 'assets/icons/google.svg';
 }

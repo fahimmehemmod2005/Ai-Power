@@ -19,6 +19,9 @@ class UTextStyles{
   static TextStyle title20_w600({Color? color}) => GoogleFonts.inter(fontSize: 20.sp, fontWeight: FontWeight.w600, color: color);
   static TextStyle title22_w600({Color? color}) => GoogleFonts.inter(fontSize: 22.sp, fontWeight: FontWeight.w600, color: color);
   static TextStyle title23_w500({Color? color}) => GoogleFonts.inter(fontSize: 18.sp, fontWeight: FontWeight.w500, color: color);
+  static TextStyle title24_w600({Color? color}) => GoogleFonts.nunito(fontSize: 24.sp, fontWeight: FontWeight.w600, color: color);
+  static TextStyle title25_w500({Color? color}) => GoogleFonts.nunito(fontSize: 14.sp, fontWeight: FontWeight.w500, color: color);
+  static TextStyle title26_w500({Color? color}) => GoogleFonts.inter(fontSize: 12.sp, fontWeight: FontWeight.w500, color: color);
 
 }
 
