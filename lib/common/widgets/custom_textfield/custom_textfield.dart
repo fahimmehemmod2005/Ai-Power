@@ -4,39 +4,52 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomInputField extends StatelessWidget {
   final String hintText;
 
-  ///Validator
+  // Validator
   final String? Function(String?)? validator;
 
-  /// Top label
+  // Top label
   final String? upLabelText;
   final TextStyle? upLabelStyle;
 
-  /// Input field label
+  // Input field label
   final String? labelText;
   final TextStyle? labelStyle;
+
   final TextEditingController? controller;
   final TextInputType? keyboardType;
   final bool obscureText;
   final int maxLines;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
+
   final Color? fillColor;
   final Color? backgroundColor;
   final Color? borderColor;
-  final double? height;
-  final double? width;
+
+  //  NEW: Error border properties
+  final Color? errorBorderColor;
+  final double errorBorderRadius;
+
+  // Layout
+  final double height;
+  final double width;
   final double borderRadius;
   final EdgeInsetsGeometry? contentPadding;
+
   final Function(String)? onChanged;
   final FocusNode? focusNode;
+
   final TextStyle? hintStyle;
   final TextStyle? textStyle;
 
   const CustomInputField({
     super.key,
-    this.validator,
     required this.hintText,
-    required this.upLabelText,
+    this.validator,
+    this.upLabelText,
+    this.upLabelStyle,
+    this.labelText,
+    this.labelStyle,
     this.controller,
     this.keyboardType,
     this.obscureText = false,
@@ -46,17 +59,19 @@ class CustomInputField extends StatelessWidget {
     this.fillColor,
     this.backgroundColor,
     this.borderColor,
-    this.height,
-    this.width,
+
+    // NEW DEFAULTS
+    this.errorBorderColor = Colors.red,
+    this.errorBorderRadius = 30,
+
+    this.height = 44,
+    this.width = double.infinity,
     this.borderRadius = 30,
     this.contentPadding,
     this.onChanged,
     this.focusNode,
     this.hintStyle,
     this.textStyle,
-    this.labelStyle,
-    this.labelText,
-    this.upLabelStyle,
   });
 
   @override
@@ -64,23 +79,19 @@ class CustomInputField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Top Label
-        Text(
-          upLabelText!, style: upLabelStyle,
-        ),
-        SizedBox(height: 5.h),
+        if (upLabelText != null) ...[
+          Text(upLabelText!, style: upLabelStyle),
+          SizedBox(height: 5.h),
+        ],
 
-        // Input Field Container
         Container(
-          height: height,
-          width: width,
+          height: height.h,
+          width: width == double.infinity ? width : width.w,
           decoration: BoxDecoration(
             color: backgroundColor,
-            borderRadius: BorderRadius.circular(borderRadius),
-            border: Border.all(
-              color: borderColor ?? Colors.transparent,
-            ),
+            borderRadius: BorderRadius.circular(borderRadius.r),
           ),
+
           child: TextFormField(
             validator: validator,
             controller: controller,
@@ -90,6 +101,7 @@ class CustomInputField extends StatelessWidget {
             onChanged: onChanged,
             focusNode: focusNode,
             style: textStyle,
+
             decoration: InputDecoration(
               labelText: labelText,
               labelStyle: labelStyle,
@@ -99,10 +111,33 @@ class CustomInputField extends StatelessWidget {
               fillColor: fillColor,
               prefixIcon: prefixIcon,
               suffixIcon: suffixIcon,
-              contentPadding: contentPadding,
+              contentPadding:
+                  contentPadding ??
+                  EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
+
+              // Normal border removed (Container is used)
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(borderRadius),
+                borderRadius: BorderRadius.circular(borderRadius.r),
                 borderSide: BorderSide.none,
+              ),
+
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(borderRadius.r),
+                borderSide: BorderSide(
+                  color: borderColor ?? Colors.transparent,
+                ),
+              ),
+
+              //  ERROR BORDER (user requested)
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(errorBorderRadius.r),
+                borderSide: BorderSide(color: errorBorderColor!, width: 1.5),
+              ),
+
+              /// 🔥 FOCUSED ERROR BORDER
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(errorBorderRadius.r),
+                borderSide: BorderSide(color: errorBorderColor!, width: 1.8),
               ),
             ),
           ),

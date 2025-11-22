@@ -57,10 +57,7 @@ class LoginView extends GetView<LoginController> {
                 //------------------- email ----------------------
 
                 CustomInputField(
-                  height: 44.h,
-                  width: double.infinity,
                   fillColor: Color(0xFF004C92),
-                  borderRadius: 30,
                   hintText: UText.loginEmailFieldHintText,
                   hintStyle: UTextStyles.title14_w400(color: Colors.white),
                   upLabelText: UText.loginEmailFieldLabelText,
@@ -95,11 +92,8 @@ class LoginView extends GetView<LoginController> {
                 Obx(
                       () => CustomInputField(
                     controller: passwordCtrl,
-                    height: 44.h,
-                    width: double.infinity,
                     obscureText: passController.isPasswordHidden.value,
                     fillColor: Color(0xFF004C92),
-                    borderRadius: 30,
                     hintText: UText.loginPassFieldHintTExt,
                     hintStyle: UTextStyles.title14_w400(color: Colors.white),
                     upLabelText: UText.loginPassFieldLabelText,
@@ -241,7 +235,7 @@ class LoginView extends GetView<LoginController> {
                     fontSize: 13.sp, fontWeight: FontWeight.w500,
                     decoration: TextDecoration.underline,
                   ) ,
-                  onTap: (){},
+                  onTap: () => Get.toNamed(Routes.SIGNUP),
                 ),
               ],
             ),

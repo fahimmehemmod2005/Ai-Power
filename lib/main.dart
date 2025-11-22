@@ -6,6 +6,7 @@ import 'app/routes/app_pages.dart';
 void main() {
   runApp(
     ScreenUtilInit(
+      designSize: const Size(374, 812),
       ensureScreenSize: true,
       splitScreenMode: true,
       minTextAdapt: true,

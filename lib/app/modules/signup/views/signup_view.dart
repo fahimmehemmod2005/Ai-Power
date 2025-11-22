@@ -58,10 +58,7 @@ class SignupView extends GetView<SignupController> {
                     //------------person textField--------------
 
                     CustomInputField(
-                      height: 44.h,
-                      width: double.infinity,
                       fillColor: Color(0xFF004C92),
-                      borderRadius: 30,
                       hintText: UText.signUpPersonFieldText,
                       hintStyle: UTextStyles.title14_w400(color: Colors.white),
                       upLabelText: UText.signUpPersonFieldLabelText,
@@ -71,11 +68,11 @@ class SignupView extends GetView<SignupController> {
                         padding:  EdgeInsets.all(12),
                         child: SvgPicture.asset(UIcons.signUpPersonFieldPrefixIcon),
                       ),
-                      validator: (value) {
+                      /*validator: (value) {
                         if (value == null || value.isEmpty) {
                           return "Enter your Name";
                         }
-                      },
+                      },*/
                     ),
 
                     SizedBox(height: 10.h),
@@ -83,10 +80,7 @@ class SignupView extends GetView<SignupController> {
                     //------------email textField--------------
 
                     CustomInputField(
-                      height: 44.h,
-                      width: double.infinity,
                       fillColor: Color(0xFF004C92),
-                      borderRadius: 30,
                       hintText: UText.signUpEmailFieldText,
                       hintStyle: UTextStyles.title14_w400(color: Colors.white),
                       upLabelText: UText.signUpEmailFieldLabelText,
@@ -96,7 +90,7 @@ class SignupView extends GetView<SignupController> {
                         padding: EdgeInsets.all(12),
                         child: SvgPicture.asset(UIcons.signUpEmailFieldPrefixIcon),
                       ),
-                      validator: (value) {
+                    /*  validator: (value) {
                     if (value == null || value.isEmpty) {
                       return "Email is required";
                     }
@@ -111,7 +105,7 @@ class SignupView extends GetView<SignupController> {
                     }
 
                     return null;
-                  },
+                  },*/
                     ),
 
                     SizedBox(height: 10.h),
@@ -121,11 +115,8 @@ class SignupView extends GetView<SignupController> {
                     Obx(
                           () => CustomInputField(
                         controller: passwordCtrl,
-                        height: 44.h,
-                        width: double.infinity,
                         obscureText: passCtrl.isPasswordHidden.value,
                         fillColor: const Color(0xFF004C92),
-                        borderRadius: 30,
                         hintText: UText.signUpNewPassFieldText,
                         hintStyle: UTextStyles.title14_w400(color: Colors.white),
                         upLabelText: UText.signUpNewPassFieldLabelText,
@@ -149,7 +140,7 @@ class SignupView extends GetView<SignupController> {
                             ),
                           ),
                         ),
-                              validator: (value) {
+                              /*validator: (value) {
                           if (value == null || value.isEmpty) {
                             return "Password is required";
                           }
@@ -169,7 +160,7 @@ class SignupView extends GetView<SignupController> {
                             return "Incorrect Password!";
                           }
                           return null;
-                        },
+                        },*/
                       ),
                     ),
 
@@ -181,11 +172,8 @@ class SignupView extends GetView<SignupController> {
                     Obx(
                           () => CustomInputField(
                         controller: confirmPasswordCtrl,
-                        height: 44.h,
-                        width: double.infinity,
                         obscureText: passCtrl.isConfirmPasswordHidden.value,
                         fillColor: const Color(0xFF004C92),
-                        borderRadius: 30,
                         hintText: UText.signUpNewPassFieldText,
                         hintStyle: UTextStyles.title14_w400(color: Colors.white),
                         upLabelText: UText.signUpNewConfirmPassFieldLabelText,
@@ -209,7 +197,7 @@ class SignupView extends GetView<SignupController> {
                             ),
                           ),
                         ),
-                            validator: (value) {
+                           /* validator: (value) {
                               if (value == null || value.isEmpty)
                                 return "Confirm password is required";
 
@@ -217,7 +205,7 @@ class SignupView extends GetView<SignupController> {
                                 return "Passwords do not match";
 
                               return null;
-                            },
+                            },*/
                       ),
                     ),
 
@@ -342,7 +330,7 @@ class SignupView extends GetView<SignupController> {
                     fontSize: 13.sp, fontWeight: FontWeight.w500,
                     decoration: TextDecoration.underline,
                   ) ,
-                  onTap: (){},
+                  onTap: () => Get.toNamed(Routes.LOGIN),
                 ),
 
                 SizedBox(height: 30.h),

@@ -8,6 +8,10 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/multi/bindings/multi_binding.dart';
 import '../modules/multi/views/multi_view.dart';
+import '../modules/otp/bindings/otp_binding.dart';
+import '../modules/otp/views/otp_view.dart';
+import '../modules/resetpassword/bindings/resetpassword_binding.dart';
+import '../modules/resetpassword/views/resetpassword_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/signup_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
@@ -50,6 +54,16 @@ class AppPages {
       name: _Paths.FORGOTVIEWS,
       page: () => const ForgotView(),
       binding: ForgotViewsBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTP,
+      page: () => const OtpView(),
+      binding: OtpBinding(),
+    ),
+    GetPage(
+      name: _Paths.RESETPASSWORD,
+      page: () => const ResetpasswordView(),
+      binding: ResetpasswordBinding(),
     ),
   ];
 }

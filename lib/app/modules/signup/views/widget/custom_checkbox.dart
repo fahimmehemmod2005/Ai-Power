@@ -23,8 +23,8 @@ class CustomCheckbox extends StatelessWidget {
       },
       child: Obx(
             () => Container(
-          height: 16.h,
-          width: 19.w,
+          height: 20.h,
+          width: 20.w,
           decoration: BoxDecoration(
             color: value.value
                 ?  Colors.transparent

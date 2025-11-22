@@ -35,6 +35,7 @@ class UText {
   static const String otpTitle = "Please check your email";
   static const String otpSubTitle = "We’ve sent a code to sohan@gmail.com";
   static const String otpRichFirstText = "Send code again";
+  static const String otpButtonText = "Submit code";
 
   //Reset password screen text's
   static const String resetPassTitle = "Reset password";
