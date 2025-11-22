@@ -19,8 +19,8 @@ class UText {
   static const String loginButtonText = "Log in";
   static const String loginCenterDividerText = "OR";
   static const String loginGoogleButtonText = "Continue with Google";
-  static const String loginRichFirstText = "Don’t have an account?";
-  static const String loginRichSecondText = " Sign Up";
+  static const String loginRichFirstText = "Don’t have an account? ";
+  static const String loginRichSecondText = "Sign Up";
 
   //Login screen text's
   static const String forgotTitle = "Request Password Reset";
@@ -69,7 +69,7 @@ class UText {
   static const String signUpButtonText = "Sign up";
   static const String signUpDividerText = "OR";
   static const String signUpGoogleButtonText = "Continue with Google";
-  static const String signUpThirdRichFirstText = "Already have an account?";
-  static const String signUpThirdRichSecondText = " Log in";
+  static const String signUpThirdRichFirstText = "Already have an account? ";
+  static const String signUpThirdRichSecondText = "Log in";
 
 }

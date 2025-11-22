@@ -2,9 +2,7 @@ import 'package:aipower/utils/color/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-
 import 'package:get/get.dart';
-
 import '../../../../utils/pictures/images/images.dart';
 import '../../../../utils/sizes/styles.dart';
 import '../../../../utils/text/text.dart';

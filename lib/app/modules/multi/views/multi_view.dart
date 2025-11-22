@@ -1,4 +1,5 @@
 import 'package:aipower/app/modules/multi/views/widget/customTextButton.dart';
+import 'package:aipower/app/routes/app_pages.dart';
 import 'package:aipower/common/padding/padding.dart';
 import 'package:aipower/common/widgets/custom_buttons/custom_elevated.dart';
 import 'package:aipower/common/widgets/CustomScaffold/custom_scaffold.dart';
@@ -17,53 +18,58 @@ class MultiView extends GetView<MultiController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScaffold(
-        child: Padding(
-          padding: UPadding.screenPadding,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+        child: Center(
+          child: SingleChildScrollView(
+            padding: UPadding.screenPadding,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
 
-              // --------------Title and sub title---------------
+                // --------------Title and sub title---------------
 
-              Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      UImages.splashText,
-                      height: 26.48.w,
-                      width: 114.45.h,
-                    ),
-                    SizedBox(height: 14.h),
-                    Text(
-                      textAlign: TextAlign.center,
-                      UText.multiScreenSubTitle,
-                      style: UTextStyles.title23_w500(color: Colors.white),
-                    ),
-                  ],
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+
+                      //-----------------Title---------------
+
+                      SvgPicture.asset(
+                        UImages.splashText,
+                        height: 26.48.w,
+                        width: 114.45.h,
+                      ),
+
+                      SizedBox(height: 14.h),
+
+                      //-------------sub Title---------------
+
+                      Text(
+                        textAlign: TextAlign.center,
+                        UText.multiScreenSubTitle,
+                        style: UTextStyles.title23_w500(color: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
 
-              SizedBox(height: 50.h),
+                SizedBox(height: 50.h),
 
-              //-----------------Create an account button -----------------------
+                //-----------------Create an account button -----------------------
 
-              CustomElevated(
-                text: UText.multiScreenButtonText,
-                onPressed: () {
-                  Get.toNamed('/signup');
-                },
-              ),
+                CustomElevated(
+                    text: UText.multiScreenButtonText,
+                    onPressed: () => Get.toNamed(Routes.SIGNUP)),
 
-              SizedBox(height: 30.h),
+                SizedBox(height: 30.h),
 
-              //-----------------Login button button -----------------------
+                //-----------------Login button button -----------------------
 
-              Customtextbutton(
-                  text: UText.multiScreenSecondButtonText,
-                  onPressed: (){}
-              )
-            ],
+                Customtextbutton(
+                    text: UText.multiScreenSecondButtonText,
+                    onPressed: () => Get.toNamed(Routes.LOGIN)),
+              ],
+            ),
           ),
         ),
       ),

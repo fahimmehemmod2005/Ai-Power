@@ -4,6 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomInputField extends StatelessWidget {
   final String hintText;
 
+  ///Validator
+  final String? Function(String?)? validator;
+
   /// Top label
   final String? upLabelText;
   final TextStyle? upLabelStyle;
@@ -31,6 +34,7 @@ class CustomInputField extends StatelessWidget {
 
   const CustomInputField({
     super.key,
+    this.validator,
     required this.hintText,
     required this.upLabelText,
     this.controller,
@@ -78,6 +82,7 @@ class CustomInputField extends StatelessWidget {
             ),
           ),
           child: TextFormField(
+            validator: validator,
             controller: controller,
             keyboardType: keyboardType,
             obscureText: obscureText,

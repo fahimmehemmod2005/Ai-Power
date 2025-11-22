@@ -1,3 +1,4 @@
+import 'package:aipower/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {
@@ -11,7 +12,7 @@ class SplashController extends GetxController {
   }
 
   jumpToNextPage() {
-    Future.delayed(Duration(seconds: 3), () => Get.offAllNamed('/multi'));
+    Future.delayed(Duration(seconds: 3), () => Get.offAllNamed(Routes.MULTI));
 
   }
 

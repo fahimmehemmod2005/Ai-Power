@@ -1,7 +1,11 @@
 import 'package:get/get.dart';
 
+import '../modules/forgot_views/bindings/forgot_views_binding.dart';
+import '../modules/forgot_views/views/forgot_views_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+import '../modules/login/views/login_view.dart';
 import '../modules/multi/bindings/multi_binding.dart';
 import '../modules/multi/views/multi_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
@@ -36,6 +40,16 @@ class AppPages {
       name: _Paths.SIGNUP,
       page: () => const SignupView(),
       binding: SignupBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGOTVIEWS,
+      page: () => const ForgotView(),
+      binding: ForgotViewsBinding(),
     ),
   ];
 }

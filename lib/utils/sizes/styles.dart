@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class UTextStyles{
   UTextStyles._();
 
-  static TextStyle title26_w600({Color? color}) => GoogleFonts.inter(fontSize: 26.sp, fontWeight: FontWeight.w600, color: color,);
+  static TextStyle title26_600({Color? color}) => GoogleFonts.inter(fontSize: 26.sp, fontWeight: FontWeight.w600, color: color,);
   static TextStyle title14_w500({Color? color}) => GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.w500, color: color,);
   static TextStyle title14_w400({Color? color}) => GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.w400, color: color,);
   static TextStyle title16_w500({Color? color}) => GoogleFonts.inter(fontSize: 16.sp, fontWeight: FontWeight.w500, color: color);
