@@ -10,6 +10,7 @@ abstract class Routes {
   static const FORGOTVIEWS = _Paths.FORGOTVIEWS;
   static const OTP = _Paths.OTP;
   static const RESETPASSWORD = _Paths.RESETPASSWORD;
+  static const BACKTOLOGIN = _Paths.BACKTOLOGIN;
 }
 
 abstract class _Paths {
@@ -22,4 +23,5 @@ abstract class _Paths {
   static const FORGOTVIEWS = '/forgot_views';
   static const OTP = '/otp';
   static const RESETPASSWORD = '/resetpassword';
+  static const BACKTOLOGIN = '/backtologin';
 }

@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/backtologin/bindings/backtologin_binding.dart';
+import '../modules/backtologin/views/backtologin_view.dart';
 import '../modules/forgot_views/bindings/forgot_views_binding.dart';
 import '../modules/forgot_views/views/forgot_views_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -64,6 +66,11 @@ class AppPages {
       name: _Paths.RESETPASSWORD,
       page: () => const ResetpasswordView(),
       binding: ResetpasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.BACKTOLOGIN,
+      page: () => const BacktologinView(),
+      binding: BacktologinBinding(),
     ),
   ];
 }

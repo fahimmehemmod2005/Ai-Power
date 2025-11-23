@@ -111,7 +111,7 @@ class ResetpasswordView extends GetView<ResetpasswordController> {
                         ),
                       ),
                     ),
-                    validator: (value) {
+                    /*validator: (value) {
                           if (value == null || value.isEmpty) {
                             return "Password is required";
                           }
@@ -131,7 +131,7 @@ class ResetpasswordView extends GetView<ResetpasswordController> {
                             return "Incorrect Password!";
                           }
                           return null;
-                        },
+                        },*/
                   ),
                 ),
 
@@ -168,7 +168,7 @@ class ResetpasswordView extends GetView<ResetpasswordController> {
                         ),
                       ),
                     ),
-                     validator: (value) {
+                    /* validator: (value) {
                               if (value == null || value.isEmpty)
                                 return "Confirm password is required";
 
@@ -176,7 +176,7 @@ class ResetpasswordView extends GetView<ResetpasswordController> {
                                 return "Passwords do not match";
 
                               return null;
-                            },
+                            },*/
                   ),
                 ),
 
@@ -185,24 +185,24 @@ class ResetpasswordView extends GetView<ResetpasswordController> {
                 CustomElevated(
                   text: UText.resetPassButtonText,
                   onPressed: (){
-                    if (_formKey.currentState!.validate()) {
-                      Get.snackbar(
-                        "Success",
-                        "Signup successfully!",
-                        snackPosition: SnackPosition.TOP,
-                        colorText: Colors.black,
-                        backgroundColor: Colors.transparent,
-                      );
-                      Get.toNamed(Routes.LOGIN);
-                    } else {
-                      Get.snackbar(
-                        "Error",
-                        "Fix all errors before continuing",
-                        snackPosition: SnackPosition.TOP,
-                        colorText: Colors.black,
-                        backgroundColor: Colors.transparent,
-                      );
-                    }
+                    // if (_formKey.currentState!.validate()) {
+                      // Get.snackbar(
+                      //   "Success",
+                      //   "Signup successfully!",
+                      //   snackPosition: SnackPosition.TOP,
+                      //   colorText: Colors.black,
+                      //   backgroundColor: Colors.transparent,
+                      // );
+                      Get.toNamed(Routes.BACKTOLOGIN);
+                    // } else {
+                    //   Get.snackbar(
+                    //     "Error",
+                    //     "Fix all errors before continuing",
+                    //     snackPosition: SnackPosition.TOP,
+                    //     colorText: Colors.black,
+                    //     backgroundColor: Colors.transparent,
+                    //   );
+                    // }
                   },
                 ),
               ],
