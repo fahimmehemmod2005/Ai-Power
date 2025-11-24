@@ -186,4 +186,17 @@ Email: info@clamea.se
 Website: www.clamea.com
 """;
 
+  // Create Case text
+  static const String createCaseHeader = "Create Case";
+  static const String createCaseTitle = "Tell us a few details about\nyou injury";
+  static const String createCaseSbuTitle = "Start by describing what happened and when. This helps us tailor your claim process and reminders.";
+  static const String createCaseLastTitle = "This helps us understand your situation better";
+  static const String createCaseDropDownLabel = "Type of injury*";
+  static const String createCaseDropDownHint = "Select injury type";
+  static const String createCaseBirthDatePickerLabel = "Date of incident*";
+  static const String createCaseBirthDatePickerHint = "mm/dd/yyyy";
+  static const String createCaseBirthDescriptionLabel = "Short description (optional)";
+  static const String createCaseBirthDescriptionHint = "Briefly describe what happened...";
+  static const String createCaseDropDownInputText = "Knee Injury";
+
 }

@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/backtologin/bindings/backtologin_binding.dart';
 import '../modules/backtologin/views/backtologin_view.dart';
+import '../modules/create_case/bindings/create_case_binding.dart';
+import '../modules/create_case/views/create_case_view.dart';
 import '../modules/forgot_views/bindings/forgot_views_binding.dart';
 import '../modules/forgot_views/views/forgot_views_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -26,7 +28,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SPLASH;
+  static const INITIAL = Routes.CREATE_CASE;
 
   static final routes = [
     GetPage(
@@ -78,6 +80,11 @@ class AppPages {
       name: _Paths.TERMS_CONDITIONS_AND_PRIVACY_POLICY,
       page: () => const TermsConditionsAndPrivacyPolicyView(),
       binding: TermsConditionsAndPrivacyPolicyBinding(),
+    ),
+    GetPage(
+      name: _Paths.CREATE_CASE,
+      page: () => const CreateCaseView(),
+      binding: CreateCaseBinding(),
     ),
   ];
 }

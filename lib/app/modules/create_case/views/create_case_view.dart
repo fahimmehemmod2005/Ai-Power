@@ -1,24 +1,23 @@
-import 'package:aipower/app/modules/terms_conditions_and_privacy_policy/views/widget/custom_scroll_bar.dart';
 import 'package:aipower/common/padding/padding.dart';
 import 'package:aipower/common/widgets/CustomScaffold/custom_scaffold.dart';
-import 'package:aipower/utils/sizes/styles.dart';
-import 'package:aipower/utils/text/text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
 import 'package:get/get.dart';
+
 import '../../../../utils/pictures/icons/icons.dart';
-import '../controllers/terms_conditions_and_privacy_policy_controller.dart';
+import '../../../../utils/sizes/styles.dart';
+import '../../../../utils/text/text.dart';
+import '../controllers/create_case_controller.dart';
 
-class TermsConditionsAndPrivacyPolicyView
-    extends GetView<TermsConditionsAndPrivacyPolicyController> {
-  const TermsConditionsAndPrivacyPolicyView({super.key});
-
+class CreateCaseView extends GetView<CreateCaseController> {
+  const CreateCaseView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScaffold(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: UPadding.screenPadding,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,16 +53,6 @@ class TermsConditionsAndPrivacyPolicyView
               ),
 
               SizedBox(height: 34.h),
-
-              // -----------------------SCROLLABLE TEXT ONLY-----------------------
-
-             CustomScrollBar(
-               child: Text(
-                 UText.termsAndConditionBodyText,
-                 style: UTextStyles.title28_w600(color: Colors.white),
-               ),
-             ),
-
             ],
           ),
         ),
