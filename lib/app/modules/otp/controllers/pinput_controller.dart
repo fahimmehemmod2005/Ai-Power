@@ -6,34 +6,29 @@ class PinInputController extends GetxController {
   final RxString pin = ''.obs;
   final RxBool isPinComplete = false.obs;
 
-  // Define the correct PIN
   final String correctPin = '1234';
 
   @override
   void onInit() {
     super.onInit();
-    pinController.addListener(_onPinChanged);
+    pinController.addListener(_handlePinChange);
   }
 
-  void _onPinChanged() {
+  void _handlePinChange() {
     pin.value = pinController.text;
-    isPinComplete.value = _validatePinLength();
+    isPinComplete.value = pin.value.length == 4;
   }
 
-  void onPinCompleted(String completedPin) {
-    pin.value = completedPin;
-    isPinComplete.value = true;
-    print('PIN Completed: $completedPin');
-  }
-
+  // 👇 PUBLIC method for CustomPinInput.onChanged
   void onPinChanged(String value) {
-    pin.value = value;
-    isPinComplete.value = _validatePinLength();
+    pinController.text = value;
+    pinController.selection = TextSelection.collapsed(offset: value.length);
+    _handlePinChange();
   }
 
-  bool _validatePinLength() {
-    // Check if PIN is exactly 4 digits and contains only numbers
-    return pin.value.length == 4 && RegExp(r'^\d{4}$').hasMatch(pin.value);
+  // 👇 PUBLIC method for CustomPinInput.onCompleted
+  void onPinCompleted(String value) {
+    onPinChanged(value);
   }
 
   void clearPin() {
@@ -42,58 +37,23 @@ class PinInputController extends GetxController {
     isPinComplete.value = false;
   }
 
-  String getPin() {
-    return pin.value;
-  }
+  bool validatePin() => pin.value.length == 4;
 
-  bool validatePin() {
-    return _validatePinLength();
-  }
+  bool verifyPin() => pin.value == correctPin;
 
-  bool verifyPin() {
-    // Check if the entered PIN matches the correct PIN
-    return pin.value == correctPin;
-  }
-
-  void submitPin() {
+  bool submitPin() {
     if (!validatePin()) {
-      Get.snackbar(
-        'Error',
-        'Please enter a valid 4-digit PIN',
-        snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
-        margin: const EdgeInsets.all(16),
-      );
-      return;
+      Get.snackbar('Error', 'Please enter a valid 4-digit PIN');
+      return false;
     }
 
-    // Verify if PIN is correct
     if (verifyPin()) {
-      Get.snackbar(
-        'Success',
-        'PIN verified successfully',
-        snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.green,
-        colorText: Colors.white,
-        margin: const EdgeInsets.all(16),
-      );
-
-      // Add your navigation or next step logic here
-      // Example: Get.offAllNamed('/home');
-      // Or call an API to verify the OTP
+      Get.snackbar('Success', 'PIN verified successfully');
+      return true;
     } else {
-      Get.snackbar(
-        'Error',
-        'Incorrect PIN. Please try again.',
-        snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.red,
-        colorText: Colors.white,
-        margin: const EdgeInsets.all(16),
-      );
-
-      // Optionally clear the PIN after wrong attempt
+      Get.snackbar('Error', 'Incorrect PIN. Please try again.');
       clearPin();
+      return false;
     }
   }
 

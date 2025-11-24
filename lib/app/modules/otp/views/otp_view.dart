@@ -87,10 +87,12 @@ class OtpView extends GetView<OtpController> {
                   child: CustomPinInput(
                     controller: pinController.pinController,
                     length: 4,
-                    onCompleted: pinController.onPinCompleted,
-                    onChanged: pinController.onPinChanged,
+                    onCompleted: pinController.onPinCompleted, // FIXED
+                    onChanged: pinController.onPinChanged,     // FIXED
                   ),
                 ),
+
+
 
                 SizedBox(height: 30.h),
 
@@ -104,8 +106,9 @@ class OtpView extends GetView<OtpController> {
                       child: CustomElevated(
                         text: UText.otpButtonText,
                         onPressed: () {
-                          if (pinController.isPinComplete.value) {
-                            pinController.submitPin();
+                          bool isVerified = pinController.submitPin();
+
+                          if (isVerified) {
                             Get.toNamed(Routes.RESETPASSWORD);
                           }
                         },
@@ -113,6 +116,8 @@ class OtpView extends GetView<OtpController> {
                     ),
                   ),
                 ),
+
+
 
                 SizedBox(height: 30.h),
 

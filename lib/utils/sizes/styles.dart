@@ -22,6 +22,8 @@ class UTextStyles{
   static TextStyle title24_w600({Color? color}) => GoogleFonts.nunito(fontSize: 24.sp, fontWeight: FontWeight.w600, color: color);
   static TextStyle title25_w500({Color? color}) => GoogleFonts.nunito(fontSize: 14.sp, fontWeight: FontWeight.w500, color: color);
   static TextStyle title26_w500({Color? color}) => GoogleFonts.inter(fontSize: 12.sp, fontWeight: FontWeight.w500, color: color);
+  static TextStyle title27_w600({Color? color}) => GoogleFonts.manrope(fontSize: 20.sp, fontWeight: FontWeight.w600, color: color);
+  static TextStyle title28_w600({Color? color}) => GoogleFonts.manrope(fontSize: 14.sp, fontWeight: FontWeight.w600, color: color);
 
 }
 

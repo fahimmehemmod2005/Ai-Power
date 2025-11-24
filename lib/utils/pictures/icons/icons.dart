@@ -29,4 +29,7 @@ class UIcons {
   static const String signUpConfirmPassFieldSuffixIcon = 'assets/icons/visibility-off.svg';
   static const String signUpShowConfirmPassFieldSuffixIcon = 'assets/icons/visibility-on.svg';
   static const String signUpGoogleButton = 'assets/icons/google.svg';
+
+  //Terms & Condition icons
+  static const String termsConditionBackIcon = 'assets/icons/left-arrow.svg';
 }

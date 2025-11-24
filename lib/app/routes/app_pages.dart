@@ -18,6 +18,8 @@ import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/signup_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/terms_conditions_and_privacy_policy/bindings/terms_conditions_and_privacy_policy_binding.dart';
+import '../modules/terms_conditions_and_privacy_policy/views/terms_conditions_and_privacy_policy_view.dart';
 
 part 'app_routes.dart';
 
@@ -71,6 +73,11 @@ class AppPages {
       name: _Paths.BACKTOLOGIN,
       page: () => const BacktologinView(),
       binding: BacktologinBinding(),
+    ),
+    GetPage(
+      name: _Paths.TERMS_CONDITIONS_AND_PRIVACY_POLICY,
+      page: () => const TermsConditionsAndPrivacyPolicyView(),
+      binding: TermsConditionsAndPrivacyPolicyBinding(),
     ),
   ];
 }

@@ -11,6 +11,8 @@ abstract class Routes {
   static const OTP = _Paths.OTP;
   static const RESETPASSWORD = _Paths.RESETPASSWORD;
   static const BACKTOLOGIN = _Paths.BACKTOLOGIN;
+  static const TERMS_CONDITIONS_AND_PRIVACY_POLICY =
+      _Paths.TERMS_CONDITIONS_AND_PRIVACY_POLICY;
 }
 
 abstract class _Paths {
@@ -24,4 +26,6 @@ abstract class _Paths {
   static const OTP = '/otp';
   static const RESETPASSWORD = '/resetpassword';
   static const BACKTOLOGIN = '/backtologin';
+  static const TERMS_CONDITIONS_AND_PRIVACY_POLICY =
+      '/terms-conditions-and-privacy-policy';
 }

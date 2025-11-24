@@ -241,7 +241,7 @@ class SignupView extends GetView<SignupController> {
                         fontSize: 12.sp, fontWeight: FontWeight.w500,
                         decoration: TextDecoration.underline,
                       ) ,
-                      onTap: (){},
+                      onTap: () => Get.toNamed(Routes.TERMS_CONDITIONS_AND_PRIVACY_POLICY),
                     ),
 
                     //------------------ and, privacy policy---------------
@@ -254,7 +254,7 @@ class SignupView extends GetView<SignupController> {
                       fontSize: 12.sp, fontWeight: FontWeight.w500,
                       decoration: TextDecoration.underline,
                     ) ,
-                      onTap: (){},
+                      onTap: () => Get.toNamed(Routes.TERMS_CONDITIONS_AND_PRIVACY_POLICY),
                     ),
                   ],
                 ),
